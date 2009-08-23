@@ -17,6 +17,7 @@ Rails::Initializer.run do |config|
   config.gem 'davetron5000-gliffy', :lib => 'gliffy'
   config.gem 'davetron5000-grit', :lib => 'grit'
   config.gem 'RedCloth', :lib => 'redcloth'
+  config.gem 'haml'
 
   # Specify gems that this application depends on and have them installed with rake gems:install
   # config.gem "bj"

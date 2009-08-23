@@ -255,22 +255,17 @@ class WikiPage
   end
 
   def is_stop_word?(word)
-    begin
-      if @@stop_words == nil
-        Rails.logger.debug("Repopulating the stop words")
-        @@stop_words = {}
-        File.open(APP_CONFIG[:git_root] + "/" + APP_CONFIG['stop_words']) do |file|
-          file.readlines.each do |line|
-            line.chomp!
-            @@stop_words[line] = true if line.length >= 3
-          end
+    if @@stop_words == nil
+      Rails.logger.debug("Repopulating the stop words")
+      @@stop_words = {}
+      File.open(APP_CONFIG[:git_root] + "/" + APP_CONFIG['stop_words']) do |file|
+        file.readlines.each do |line|
+          line.chomp!
+          @@stop_words[line] = true if line.length >= 3
         end
       end
-      word.length < 3 || @@stop_words[word] || (word =~ /[^A-Za-z]/) 
-    rescue Exception => ex
-      Rails.logger.error(ex)
-      false
     end
+    word.length < 3 || @@stop_words[word] || (word =~ /[^A-Za-z]/) 
   end
 
   def self.repo

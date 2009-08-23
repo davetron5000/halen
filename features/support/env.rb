@@ -15,11 +15,12 @@ end
 
 Before do
   FileUtils.rm_r(APP_CONFIG[:git_root], :force => true)
-  FileUtils.cp_r(APP_CONFIG[:git_root] + "_clean",APP_CONFIG[:git_root])
+  base = APP_CONFIG[:git_root].split(/\//)[0..-2].join("/")
+  system("cd #{base} ; tar xfz test.tgz")
 end
 
 After do
-  FileUtils.rm_r(APP_CONFIG[:git_root])
+  FileUtils.rm_r(APP_CONFIG[:git_root], :force => true)
 end
 require 'cucumber/rails/rspec'
 require 'webrat/core/matchers'

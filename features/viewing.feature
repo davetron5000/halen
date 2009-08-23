@@ -8,7 +8,7 @@ Scenario: View a page via direct URL
   Then I should see "Main Page"
   And I should see "This is the main page"
   And I should see the link "History"
-  And the page title should be "Test Wiki - Main Page"
+  And the page title should be "Main Page - Test Wiki"
   And the meta "description" should be "This is a test wiki.  This is the main page content for testing"
   And the meta "keywords" should be "test, wiki, "
 
@@ -26,5 +26,5 @@ Scenario: View a page's history and see an old version
   When I click link 4
   Then I should see "Here is a line I added to make some history"
   And I should not see "Here is another line"
-  And the page title should be "Test Wiki - Page With History"
+  And the page title should be "Page With History - Test Wiki"
 

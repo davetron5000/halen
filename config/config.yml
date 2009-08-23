@@ -13,10 +13,10 @@ development:
 
 test:
   git_root: git/test
-  wiki_name: Name of the wiki
-  stop_words: file containing stop words in git_root
-  wiki_description: Description
-  wiki_keywords: Some keywords
+  wiki_name: Test Wiki
+  stop_words: stop_words
+  wiki_description: This is a test wiki
+  wiki_keywords: test, wiki
   gliffy_account_id: 
   gliffy_consumer_key: 
   gliffy_consumer_secret: 

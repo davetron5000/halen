@@ -4,10 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>
-    <%= @wiki_page.name_as_title if @wiki_page %>
-    - <%= APP_CONFIG['wiki_name'] %> 
-  </title>
+  <title><%= @wiki_page.name_as_title if @wiki_page %> - <%= APP_CONFIG['wiki_name'] %></title>
   <meta name="description" content="<%= APP_CONFIG['wiki_description'] %>.  <%= @wiki_page.description if @wiki_page %>" />
   <link rel="alternate" type="application/rss+xml"  href="<%= history_url %>.rss" title="Wiki Updates">
   <link rel="alternate" type="application/rss+xml"  href="<%= wiki_pages_url %>.rss" title="Wiki Pages">

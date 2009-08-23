@@ -33,4 +33,6 @@ Halen is a very simple wiki that stores its wiki pages in a Git repository.  It 
 4. Run migrations
 5. Create an account for yourself.  Currently, account creation is not enabled, as I wanted this for my own devices only.  So, accounts must be created manually.
 6. Start 'er up.
-
+7. When editing pages:
+   * <tt>[w:WikiName(nicer name)]</tt> or just <tt>[w:WikiName]</tt> will create links to new pages.  Click on them prompts for creation (if logged in).
+   * <tt>gliffy. 1768557 | center | M</tt> adds a Gliffy diagram.  The first "param" is the id from Gliffy, the second controls the alignment (left, center, right) and the final is the size (T, S, M, L).

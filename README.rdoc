@@ -6,6 +6,8 @@ Halen is a very simple wiki that stores its wiki pages in a Git repository.  It 
 
     rake gems # show the needed gems; install any that are missing
 
+Note that you cannot use the main Grit package, but must use mine; it contains an enhancement that isn't in the main repo.  Also note that, as of now, the Gliffy Ruby Client Library isn't official, so you must use mine.  Once it's blessed, I'll switch the requirements.
+
 = Configuration
 
 1. Configure your database as per normal with Rails.
@@ -36,3 +38,10 @@ Halen is a very simple wiki that stores its wiki pages in a Git repository.  It 
 7. When editing pages:
    * <tt>[w:WikiName(nicer name)]</tt> or just <tt>[w:WikiName]</tt> will create links to new pages.  Click on them prompts for creation (if logged in).
    * <tt>gliffy. 1768557 | center | M</tt> adds a Gliffy diagram.  The first "param" is the id from Gliffy, the second controls the alignment (left, center, right) and the final is the size (T, S, M, L).
+
+= Why?
+
+I wanted to learn Rails from inception to deployment, and I wanted to do something that wasn't just a vanilla CRUD application.  I also didn't want to get wrapped up in design or complexity.  So, I figured that a wiki that had some cool features and used Git for content would be just the thing.
+
+This is the result.  I probably denied myself some ActiveRecord knowledge by using Git (though AR is used for the user info), but this was still pretty fun and I think I learned a lot.
+

@@ -1,9 +1,3 @@
 [submodule "vendor/plugins/restful_authentication"]
 	path = vendor/plugins/restful_authentication
 	url = git://github.com/technoweenie/restful-authentication.git
-[submodule "git/test"]
-	path = git/test_clean
-	url = /Users/davec/Projects/halen.repos/test/.git
-[submodule "git/dev"]
-	path = git/dev
-	url = /Users/davec/Projects/halen.repos/dev/.git

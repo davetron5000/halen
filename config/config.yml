@@ -10,10 +10,9 @@ development:
   gliffy_description: 
   gliffy_username: 
   gliffy_folder: 
-  root: /uri_root
 
 test:
-  git_root: /path/to/git/content
+  git_root: git/test
   wiki_name: Name of the wiki
   stop_words: file containing stop words in git_root
   wiki_description: Description
@@ -24,7 +23,6 @@ test:
   gliffy_description: 
   gliffy_username: 
   gliffy_folder: 
-  root: /uri_root
 
 production:
   git_root: /path/to/git/content

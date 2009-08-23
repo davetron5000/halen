@@ -1,9 +1,0 @@
-= Halen
-
-Halen is a very simple wiki that stores its wiki pages in a Git repository.  It features Textfile formatting and Gliffy diagram integration.
-
-= Install
-
-    rake gems # show the needed gems; install any that are missing
-    script/plugin install git://github.com/technoweenie/restful-authentication.git
-    mv vendor/plugins/restful-authentication vendor/plugins/restful_authentication

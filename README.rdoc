@@ -1,0 +1,36 @@
+= Halen
+
+Halen is a very simple wiki that stores its wiki pages in a Git repository.  It features Textfile formatting and Gliffy diagram integration.
+
+= Install
+
+    rake gems # show the needed gems; install any that are missing
+
+= Configuration
+
+1. Configure your database as per normal with Rails.
+2. Create a new git repository for your content:
+    mkdir /path/to/your/git/repo
+    cd /path/to/your/git/repo
+    mkdir wiki
+    echo "h1. This is the Main Page" > wiki/MainPage
+    touch stop_words
+    git init
+    git add .
+    git commit -m 'initial commit'
+3. Configure halen. `config/config.yml` contains halen-specific configurations:
+   [+git_root+]  Full path to the Git repository that contains your content (see below)
+   [+wiki_name+]  Public-facing name of your wiki
+   [+stop_words+]  Set to `stop_words` (unless you have a burning desire to change it; change the file in your content repo, too)
+   [+wiki_description+]  A longer description of your wiki; this will show up in all HTML
+   [+wiki_keywords+]  A few short keywords for your wiki; this shows up in all HTML
+   [+gliffy_account_id+]  Gliffy account ID, if using Gliffy
+   [+gliffy_consumer_key+]  Gliffy consumer key, if using Gliffy
+   [+gliffy_consumer_secret+]  Gliffy consumer secret, if using Gliffy
+   [+gliffy_description+]  Description of your app, for Gliffy tracking
+   [+gliffy_username+]  Your Gliffy username, if using Gliffy
+   [+gliffy_folder+]  The folder in your Gliffy account where diagrams will live for this wiki
+4. Run migrations
+5. Create an account for yourself.  Currently, account creation is not enabled, as I wanted this for my own devices only.  So, accounts must be created manually.
+6. Start 'er up.
+

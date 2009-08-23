@@ -1,0 +1,5 @@
+%h1#wiki_page_name== Create #{@wiki_page.name_as_title}
+-form_for(@wiki_page,:url => {:action => :create}, :html => {:method => :post}) do |f|
+  =render :partial => 'edit_form', :locals => { :wiki_page => @wiki_page, :label => 'Add', :is_new => true, :f => f }
+%hr
+=link_to "Back", url_for(:back)

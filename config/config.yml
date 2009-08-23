@@ -1,0 +1,41 @@
+development:
+  git_root: /path/to/git/content
+  wiki_name: Name of the wiki
+  stop_words: file containing stop words in git_root
+  wiki_description: Description
+  wiki_keywords: Some keywords
+  gliffy_account_id: 
+  gliffy_consumer_key: 
+  gliffy_consumer_secret: 
+  gliffy_description: 
+  gliffy_username: 
+  gliffy_folder: 
+  root: /uri_root
+
+test:
+  git_root: /path/to/git/content
+  wiki_name: Name of the wiki
+  stop_words: file containing stop words in git_root
+  wiki_description: Description
+  wiki_keywords: Some keywords
+  gliffy_account_id: 
+  gliffy_consumer_key: 
+  gliffy_consumer_secret: 
+  gliffy_description: 
+  gliffy_username: 
+  gliffy_folder: 
+  root: /uri_root
+
+production:
+  git_root: /path/to/git/content
+  wiki_name: Name of the wiki
+  stop_words: file containing stop words in git_root
+  wiki_description: Description
+  wiki_keywords: Some keywords
+  gliffy_account_id: 
+  gliffy_consumer_key: 
+  gliffy_consumer_secret: 
+  gliffy_description: 
+  gliffy_username: 
+  gliffy_folder: 
+  root: /uri_root

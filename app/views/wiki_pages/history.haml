@@ -1,0 +1,4 @@
+%ol#history
+  -@wiki_page.history.each do |page|
+    %li=link_to "#{human_readable_date(page.publish_date)} by #{page.author.to_s}", wiki_page_version_path(page,:sha1 => page.sha1)
+

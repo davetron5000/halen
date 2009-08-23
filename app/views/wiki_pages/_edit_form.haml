@@ -1,0 +1,8 @@
+=f.error_messages
+-if is_new
+  =hidden_field_tag('wiki_page[name]',wiki_page.name)
+=f.text_area :content
+%br
+=f.submit label
+-if !is_new
+  =f.submit 'Cancel'

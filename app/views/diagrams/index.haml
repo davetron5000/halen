@@ -1,0 +1,28 @@
+%h1 Diagrams
+%table#diagrams
+  %tr
+    %td#new_diagram{:colspan=>2}
+      -form_tag new_diagram_path,:method => 'get' do
+        =text_field_tag :diagram_name, 'New Diagram Name...', :size => 20
+        =hidden_field_tag :wiki_page_id, params[:wiki_page_id]
+        =submit_tag "Add New Diagram", :name => nil
+      %hr
+  -@diagrams.each_index do |index|
+    -diagram = @diagrams[index]
+    -next if !diagram.is_public?
+    -if index % 2 == 0
+      %tr
+    %td
+      -link_to edit_wiki_page_path(@wiki_page,:diagram_id => diagram.document_id) do
+        %img{:src=>diagram_path(diagram.document_id,:size => :T)}
+      %br
+        %span.diagram_name=diagram.name
+        %br
+        %span.diagram_date="Created: #{human_readable_date(diagram.create_date)}"
+        %br
+        %span.diagram_date="Last Modified: #{human_readable_date(diagram.mod_date)}"
+        %br=link_to 'Insert',edit_wiki_page_path(@wiki_page,:diagram_id => diagram.document_id)
+        |
+        =link_to 'Edit & Insert',edit_diagram_path(diagram.document_id,:wiki_page_id => @wiki_page.name)
+        |
+        =link_to 'Delete',diagram_path(diagram.document_id,:wiki_page_id => @wiki_page.name), :method => :delete

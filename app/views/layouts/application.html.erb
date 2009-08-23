@@ -1,0 +1,25 @@
+<%= render :partial => 'common/header' %>
+<div class="span-2">&nbsp;</div>
+<div class="span-20">
+  <% if flash[:notice] %>
+    <div id="flash_notice"><%= flash[:notice] %></div>
+  <% end %>
+  <% if flash[:error] %>
+    <div id="flash_error"><%= flash[:error] %></div>
+  <% end %>
+  &nbsp;
+</div>
+<div class="span-2 last">&nbsp;</div>
+
+<div class="span-1">&nbsp;</div>
+<div class="span-18" id="maincontent">
+  <%= yield %>
+</div>
+<div class="span-5 last" id="side">
+  <div id="side_nav">
+  <%= render :partial => 'common/nav' %>
+  <%= yield :page_nav %>
+  <%= render :partial => 'common/search' %>
+  </div>
+</div>
+<%= render :partial => 'common/footer' %>

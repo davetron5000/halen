@@ -1,0 +1,14 @@
+=content_for :page_nav do
+  %hr
+    %ul
+      -if logged_in?
+        %li#side_nav_element=link_to 'Edit', edit_wiki_page_path(@wiki_page)
+        %li#side_nav_element=link_to 'Add Diagram', diagrams_path(:wiki_page_id => @wiki_page.name)
+      %li#side_nav_element=link_to 'History', wiki_page_history_path(@wiki_page)
+
+%h1#page_title=h @wiki_page.name_as_title
+-if @version
+  %h2#version="Viewing old version #{h @version}; #{link_to 'View Current', wiki_page_path(@wiki_page)}"
+#page_content=to_html(@wiki_page)
+%hr
+%h2#date="Last Updated #{h human_readable_date(@wiki_page.publish_date)} by #{h @wiki_page.author.name}"

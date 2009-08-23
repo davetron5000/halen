@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>
+    <%= @wiki_page.name_as_title if @wiki_page %>
+    - <%= APP_CONFIG['wiki_name'] %> 
+  </title>
+  <meta name="description" content="<%= APP_CONFIG['wiki_description'] %>.  <%= @wiki_page.description if @wiki_page %>" />
+  <link rel="alternate" type="application/rss+xml"  href="<%= history_url %>.rss" title="Wiki Updates">
+  <link rel="alternate" type="application/rss+xml"  href="<%= wiki_pages_url %>.rss" title="Wiki Pages">
+  <meta name="keywords" content="<%= APP_CONFIG['wiki_keywords'] %>, <%= @wiki_page.keywords.join(',') if @wiki_page %>" />
+  <%= stylesheet_link_tag 'blueprint/screen.css' %>
+  <%= stylesheet_link_tag 'blueprint/print.css', :media => 'print'%>
+  <!--[if lt IE 8]>
+  <%= stylesheet_link_tag 'blueprint/ie.css' %>
+  <![endif]-->
+  <%= stylesheet_link_tag 'styles' %>
+</head>
+<body>
+  <div class="container">
+    <div class="span-24 last">
+      <h1 id="site_title"><%= APP_CONFIG['wiki_name'] %></h1>
+    </div>

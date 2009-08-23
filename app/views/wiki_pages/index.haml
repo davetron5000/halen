@@ -1,0 +1,4 @@
+%h1=params[:search].nil? ? "All Pages" : "Search Results"
+%ul#search_results
+  -@wiki_pages.sort.each do |wiki_page|
+    %li= link_to wiki_page.name, wiki_page

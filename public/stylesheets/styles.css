@@ -1,0 +1,138 @@
+body {
+  color: #3f3f3f;
+  background: #99bfbe;
+  background-image: url(../images/background_top_gradient.png);
+  background-repeat: repeat-x;
+  font-size: 15px;
+  line-height: 30px; }
+
+h1, h2, h3, h4, h5 {
+  font-family: verdana,arial,helvetica,sans-serif;
+  font-weight: bold;
+  color: #1f1f1f; }
+
+h1 {
+  font-size: 20px;
+  line-height: 40px; }
+
+h2 {
+  font-size: 17px;
+  line-height: 34px; }
+
+h3 {
+  font-size: 15px;
+  line-height: 30px; }
+
+h4 {
+  font-size: 13px;
+  line-height: 26px; }
+
+h5 {
+  font-size: 11px;
+  line-height: 22px; }
+
+p {
+  text-align: justify; }
+
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover {
+  background-color: #a8cecd;
+  color: #636363;
+  cursor: pointer; }
+
+h1#site_title:hover, h1#page_title:hover {
+  background-color: transparent;
+  cursor: auto; }
+
+h2#version {
+  font-style: italic;
+  font-size: 18px;
+  padding-left: 36px;
+  padding-right: 36px; }
+
+h2#date {
+  font-size: 18px;
+  font-style: italic; }
+
+h1#site_title {
+  padding-top: 10px;
+  font-size: 48px;
+  font-weight: bold;
+  width: 100%;
+  color: #1f1f1f; }
+
+h1#page_title {
+  color: #1f1f1f;
+  border-bottom: solid thin;
+  padding-top: 18px;
+  color: #1f1f1f;
+  font-size: 28px;
+  font-weight: bold;
+  padding-bottom: 18px; }
+
+body,
+p,
+ol,
+ul,
+td {
+  font-family: verdana,arial,helvetica,sans-serif; }
+
+a {
+  color: #3f3f3f; }
+
+a:hover {
+  color: #3f3f00;
+  background-color: #bbe1e0; }
+
+textarea#wiki_page_content {
+  width: 680px;
+  height: 700px;
+  padding: 9px;
+  font-family: monaco, courier, fixed-width; }
+
+div#flash_notice,
+div#flash_error {
+  margin: 9px;
+  text-align: center;
+  padding: 9px; }
+
+div#flash_error {
+  color: red;
+  border: solid thick red;
+  background-color: pink; }
+
+div#flash_notice {
+  color: green;
+  border: solid thick green;
+  background-color: #BCFFB6; }
+
+span#nav_element {
+  font-weight: bold; }
+
+div#side_nav {
+  background: #aaa5b0;
+  padding: 18px;
+  padding-top: 18px;
+  margin-top: 74px; }
+
+div#side_nav ul {
+  list-style-type: square; }
+
+li#history_element a {
+  text-decoration: none; }
+
+li#history_element a:hover {
+  text-decoration: underline; }
+
+form#search input {
+  width: 100%; }
+
+#diagrams span.diagram_name {
+  font-size: 150%; }
+
+#diagrams span.diagram_date {
+  font-size: 75%;
+  font-style: italic; }
+
+#new_diagram input {
+  padding: 3px;
+  font-size: 200%; }

@@ -11,6 +11,7 @@ Scenario: View a page via direct URL
   And the page title should be "Main Page - Test Wiki"
   And the meta "description" should be "This is a test wiki.  This is the main page content for testing"
   And the meta "keywords" should be "test, wiki, "
+  And I should see "All Content by Testing Test is licensed under a"
 
 Scenario: Verify the keywords
   Given I am not logged in

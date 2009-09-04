@@ -6,6 +6,10 @@ body {
   font-size: 15px;
   line-height: 30px; }
 
+code {
+  background: white;
+  color: black; }
+
 h1, h2, h3, h4, h5 {
   font-family: verdana,arial,helvetica,sans-serif;
   font-weight: bold;

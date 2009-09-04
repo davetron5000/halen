@@ -1,6 +1,11 @@
 = Halen
 
-Halen is a very simple wiki that stores its wiki pages in a Git repository.  It features Textfile formatting and Gliffy diagram integration.
+Halen is a very simple wiki that stores its wiki pages in a Git repository.  It features:
+
+ * Textfile formatting 
+ * Gliffy diagram integration.
+ * Disqus Comments
+ * Google Analytics
 
 = Install
 
@@ -20,7 +25,7 @@ Note that you cannot use the main Grit package, but must use mine; it contains a
     git init
     git add .
     git commit -m 'initial commit'
-3. Configure halen. `config/config.yml` contains halen-specific configurations:
+3. Configure halen. <tt>config/config.yml.example</tt> should be renamed <tt>config/config.yml</tt> and should contain placeholder for these options:
    [+git_root+]  Full path to the Git repository that contains your content (see below)
    [+wiki_name+]  Public-facing name of your wiki
    [+stop_words+]  Set to `stop_words` (unless you have a burning desire to change it; change the file in your content repo, too)
@@ -32,6 +37,12 @@ Note that you cannot use the main Grit package, but must use mine; it contains a
    [+gliffy_description+]  Description of your app, for Gliffy tracking
    [+gliffy_username+]  Your Gliffy username, if using Gliffy
    [+gliffy_folder+]  The folder in your Gliffy account where diagrams will live for this wiki
+   [+copyright_holder+] The name of the owner of the copyright
+   [+copyright_name+] Name of your copyright license
+   [+copyright_link+] Link to you copyright license
+   [+copyright_image+] Link to an image describing your copyright statement
+   [+disqus_name+] the short name of your Disqus account for the site
+   [+contact_email+] Email address for the contact link
 4. Run migrations
 5. Create an account for yourself.  Currently, account creation is not enabled, as I wanted this for my own devices only.  So, accounts must be created manually.
 6. Start 'er up.

@@ -83,6 +83,11 @@ a:hover {
   color: #3f3f00;
   background-color: #bbe1e0; }
 
+div.copyright {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 18px; }
+
 textarea#wiki_page_content {
   width: 680px;
   height: 700px;

@@ -23,6 +23,11 @@ test:
   gliffy_description: 
   gliffy_username: 
   gliffy_folder: 
+  copyright_holder: Testing Test
+  copyright_name: Creative Commons Attribution-Noncommercial-Share Alike 3.0 United States License
+  copyright_link: http://creativecommons.org/licenses/by-nc-sa/3.0/us/
+  copyright_image: http://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png
+  
 
 production:
   git_root: /path/to/git/content

@@ -2,8 +2,10 @@
   %ul
     %li#nav_element=link_to "Home", wiki_page_path('MainPage') 
     %li#nav_element=link_to "All Pages", wiki_pages_path
-    %li#nav_element=link_to "Help", wiki_page_path('HelpWithEditing')
+    %li#nav_element=link_to "About", wiki_page_path('AboutThisWiki')
+    %li#nav_element=mail_to "#{APP_CONFIG['contact_email']}", "Contact", :encode => "hex"
     -if logged_in?
+      %li#nav_element=link_to "Help", wiki_page_path('HelpWithEditing')
       %li#nav_element=link_to "Logout", logout_url
     -else
       %li#nav_element=link_to "Login", login_url
